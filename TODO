@@ -1,0 +1,31 @@
+TODO:
+*   add (IBE) curves from RFCs (5091, 6509, 7859)?
+*   accept input in X9.63 format?
+*   curves over binary or extension fields?
+
+DONE:
+*   unittest -> pytest
+*   own API around SymPy functions
+*   tox
+*   setup.py -> setup.cfg
+*   merge 'find' functions into Curve subclasses
+*   reorganize code:
+    ellipticcurve.py
+        weierstrass.py
+        twistedweierstrass.py
+        etc.
+*   extra sanity check on found curves
+*   modularize find():
+    -   move some code to helper methods _find_LR_pairs() and _find_p()
+    -   find() now takes optional argument p
+*   single CLI program 'echec':
+    -   test known curves first
+    -   (try to) determine parameters
+    -   if no success: iterate over p's from known curves,
+        determine other parameters, check resulting curve
+*   cli script under echec/ instead of scripts/?
+*   rethink "flat" namespace concept
+*   improve test cases:
+    -   unknown curves -> pick *really* unknown curves
+*   add tests for cli script to test/ directory
+*   use poetry?

@@ -1,0 +1,23 @@
+[project]
+name = "echec"
+version = "1.0.0"
+description = "Recognizing elliptic curves"
+readme = "README.md"
+authors = [
+    { name = "Marc Penninga" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "gmpy2>=2.2.0.a1",      # we'd like "gmpy2>=2.2", but that hasn't been released yet
+    "sympy>=1.1",
+]
+
+[project.scripts]
+echec = "echec.main:main"
+
+[build-system]
+requires = ["setuptools>=66.1.0"]
+build-backend = "setuptools.build_meta"
+
+[tools.setuptools]
+package-dir = {"" = "src"}
