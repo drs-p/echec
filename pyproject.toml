@@ -8,7 +8,7 @@ authors = [
 ]
 requires-python = ">=3.8"
 dependencies = [
-    "gmpy2>=2.2.0.a1",      # we'd like "gmpy2>=2.2", but that hasn't been released yet
+    "gmpy2>=2.2.0",
     "sympy>=1.1",
 ]
 
