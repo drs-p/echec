@@ -1,6 +1,6 @@
 
-Echec - recognising elliptic curves
-===================================
+ECHEC - Find an elliptic curve containing the given points
+==========================================================
 
 Echec is both a Python library and a command-line application for finding
 elliptic curves over finite fields that contain one or more given points.
