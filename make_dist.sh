@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pipx run build[uv] --installer=uv
+pipx run --python=python3.13 build[uv] --installer=uv

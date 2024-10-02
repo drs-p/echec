@@ -30,9 +30,9 @@ fields, including binary fields, are not (yet?) supported.
 Installation
 ------------
 
-Echec requires Python, version 3.8 or later.
-It just *may* work against older versions (probably >= 3.6) as well, though this
-is neither tested nor supported. Echec also requires SymPy.
+Echec should work with any supported version of Python.
+It just *may* work with older versions (probably >= 3.6) as well, though this
+is neither tested nor supported. Echec also requires sympy and gmpy2.
 
 The easiest way to install echec is to use pip to install either the source
 distribution or the wheel:
