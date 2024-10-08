@@ -126,6 +126,14 @@ WARNING: command-line arguments like "00000010" will be interpreted as decimal
 integers, not as hexadecimal!
 
 
+Building
+--------
+
+If you want to run the tests and build the project yourself,
+run the included `build.sh` script.
+This needs Docker (or a lookalike such as podman).
+
+
 Copyright
 ---------
 
