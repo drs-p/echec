@@ -3,8 +3,9 @@ dist/
 *.egg-info/
 klad/
 **/__pycache__/
+*.py[oc]
 .pytest_cache/
-.python-version
 **/*.swp
 .tox/
-venv/
+.venv
+wheels/

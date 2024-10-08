@@ -14,10 +14,3 @@ dependencies = [
 
 [project.scripts]
 echec = "echec.main:main"
-
-[build-system]
-requires = ["setuptools>=66.1.0"]
-build-backend = "setuptools.build_meta"
-
-[tools.setuptools]
-package-dir = {"" = "src"}
