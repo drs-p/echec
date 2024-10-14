@@ -129,9 +129,15 @@ integers, not as hexadecimal!
 Building
 --------
 
-If you want to run the tests and build the project yourself,
-run the included `build.sh` script.
-This needs Docker (or a lookalike such as podman).
+Testing and building is easiest in a Docker container,
+using the included `Makefile`:
+
+```
+make test
+make dist
+```
+
+This of course needs Docker (or a lookalike like podman) and GNU make.
 
 
 Copyright
