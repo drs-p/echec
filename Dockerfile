@@ -4,7 +4,7 @@ RUN apt-get --yes update; \
         ca-certificates curl; \
     apt-get --yes clean; \
     rm -rf /var/lib/apt/lists/*; \
-    curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="/usr/local" sh; \
+    curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="/usr/local/bin" sh; \
     uv tool install tox --with tox-uv
 WORKDIR /echec
 
