@@ -1,16 +1,23 @@
-.PHONY: all clean container test dist
+.PHONY: all clean image test dist
 
 all: dist
 
 clean:
 	-rm -rf src/echec.egg-info tests/__pycache__ .tox
 
-container:
-	docker build --tag echec .
+image:
+	docker build --tag uv .
 
-test: container
-	docker run --rm -it --mount type=bind,source=.,target=/echec echec uvx tox run
+test: image
+	docker create --tty --name "uv" uv tool run tox run
+	docker cp . uv:/home/uv
+	docker start --attach uv
+	docker rm uv
 
-dist: container
-	docker run --rm -it --mount type=bind,source=.,target=/echec echec uv build
-
+dist: image
+	docker create --tty --name "uv" uv build
+	docker cp . uv:/home/uv
+	docker start --attach uv
+	mkdir -p dist
+	docker cp uv:dist/. dist
+	docker rm uv
