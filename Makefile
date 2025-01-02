@@ -9,15 +9,7 @@ image:
 	docker build --tag uv .
 
 test: image
-	docker create --tty --name "uv" uv tool run tox run
-	docker cp . uv:/home/uv
-	docker start --attach uv
-	docker rm uv
+	docker run --rm -it --mount type=bind,source=.,target=/echec uv tool run tox --workdir /tmp/echec/tox run
 
 dist: image
-	docker create --tty --name "uv" uv build
-	docker cp . uv:/home/uv
-	docker start --attach uv
-	mkdir -p dist
-	docker cp uv:dist/. dist
-	docker rm uv
+	docker run --rm -it --mount type=bind,source=.,target=/echec uv build
