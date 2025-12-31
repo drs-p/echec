@@ -1,3 +1,6 @@
+**WARNING: DEVELOPMENT HAS MOVED TO [CODEBERG](https://codeberg.org/drs-p/echec)**
+
+****
 
 ECHEC - Find an elliptic curve containing the given points
 ==========================================================
